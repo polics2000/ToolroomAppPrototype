@@ -1,0 +1,8 @@
+Project Target
+
+RESTful Route with
++ Express 
++ MongoDB 
++ static files(css / js / html)
+
+CRUD

@@ -1,0 +1,122 @@
+<%- include("../partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+        <title>Find | Kakao Clone</title>
+        <link rel="stylesheet" href="/stylesheets/kakao_clone/styles.css">
+    </head>
+    <body>
+        <div class="status-bar">
+            <div class="status-bar__column">
+                <span class="status-bar__clock">13:54</span>
+            </div>
+            <div class="status-bar__column">
+                <i class="fas fa-clock"></i>
+                <i class="fas fa-volume-mute"></i>
+                <i class="fas fa-wifi"></i>
+                <span class="status-bar__battery-level">100%</span>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header__header-column">
+                <h1 class="header__title">Find</h1>
+            </div>
+            <div class="header__header-column">
+                <span class="header__icon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="header__icon">
+                    <i class="fas fa-cog"></i>
+                </span>
+            </div>
+        </header>
+        <main class="find">
+            <header class="find__header">
+                <ul class="find__header-list">
+                    <li class="find__header-btn header-btn">
+                        <span class="header-btn__icon">
+                            <i class="fas fa-qrcode fa-2x"></i>
+                        </span>
+                        <span class="header-btn__title">
+                            QR Code
+                        </span>
+                    </li>
+                    <li class="find__header-btn header-btn">
+                            <span class="header-btn__icon">
+                                <i class="fas fa-user-plus fa-2x"></i>
+                            </span>
+                            <span class="header-btn__title">
+                                Add by Contacts
+                            </span>
+                        </li>
+                        <li class="find__header-btn header-btn">
+                                <span class="header-btn__icon">
+                                    <i class="fas fa-passport fa-2x"></i>
+                                </span>
+                                <span class="header-btn__title">
+                                    Add by ID
+                                </span>
+                        </li>
+                        <li class="find__header-btn header-btn">
+                                <span class="header-btn__icon">
+                                    <i class="far fa-envelope fa-2x"></i>
+                                </span>
+                                <span class="header-btn__title">
+                                    Invite
+                                </span>
+                        </li>
+                </ul>
+            </header>
+            <ul class="find__recommended">
+                <h5 class="find__title">
+                    Recommended Friends
+                </h5>
+                <li class="find__friend friend friend--lg">
+                        <div class="friend__column">
+                            <img src="data:image/jpeg;base64,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"  class="friend__avatar">
+                            <div class="friend__content">
+                                <span class="friend__name">
+                                    Yeonghun Ahn
+                                 </span>
+                             </div>
+                         </div>
+                         <div class="friend__column">
+                             <div class="friend__add-btn">
+                                 <i class="fas fa-user-plus"></i>
+                             </div>
+                         </div>
+                     </li>
+            </ul>
+        </main>
+        <nav class="nav">
+			<ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="/blogs/kakao_clone/friends" class="nav__list-link">
+                        <i class="far fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="/blogs/kakao_clone/index" class="nav__list-link">
+                        <div class="nav__badge">1</div>
+                        <i class="fas fa-comment"></i>
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="/blogs/kakao_clone/find" class="nav__list-link">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="/blogs/kakao_clone/more" class="nav__list-link">
+                        <i class="fas fa-ellipsis-h"></i>
+                </a>
+                </li>
+            </ul>
+        </nav>  
+    </body>
+</html>

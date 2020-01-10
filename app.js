@@ -11,6 +11,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));
+app.engine('html', require('ejs').renderFile);
 
 var blogSchema = new mongoose.Schema({
 	title: String,
@@ -41,10 +42,6 @@ app.get("/blogs", function(req, res){
 	});
 });
 
-app.get("/blogs/programs", function(req, res){
-	res.send("programs");
-});
-
 app.get("/blogs/new", function(req,res){
 	res.render("new");
 });
@@ -59,6 +56,47 @@ app.post("/blogs", function(req,res){
 		}
 	});
 });
+
+app.get("/blogs/programs", function(req, res){
+	res.send("programs");
+});
+
+app.get("/blogs/piggame", function(req, res){
+	res.render("./piggame/pigGame.html");	
+});
+
+app.get("/blogs/kakao_clone/index", function(req, res){
+	res.render("./kakao_clone/index.html");
+});
+
+app.get("/blogs/kakao_clone/chat", function(req, res){
+	res.render("./kakao_clone/chat.html");
+});
+
+app.get("/blogs/kakao_clone/find", function(req, res){
+	res.render("./kakao_clone/find.html");
+});
+
+app.get("/blogs/kakao_clone/friends", function(req, res){
+	res.render("./kakao_clone/friends.html");
+});
+
+app.get("/blogs/kakao_clone/more", function(req, res){
+	res.render("./kakao_clone/more.html");
+});
+
+app.get("/blogs/kakao_clone/settings", function(req, res){
+	res.render("./kakao_clone/settings.html");
+});
+
+app.get("/blogs/colorgame", function(req, res){
+	res.render("./colorgame/colorGame.html");
+});
+
+app.get("/blogs/museumofcandy", function(req, res){
+	res.render("./museumofcandy/index.html");
+});
+
 
 app.get("/blogs/:id", function(req, res) {
 	Blog.findById(req.params.id, function(err, foundData){
