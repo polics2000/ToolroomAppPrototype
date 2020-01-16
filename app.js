@@ -61,6 +61,10 @@ app.post("/blogs", function(req,res){
 // 	res.send("programs");
 // });
 
+app.get("/blogs/budgetControl", function(req, res){
+	res.render("./budgetControl/index.html");	
+});
+
 app.get("/blogs/piggame", function(req, res){
 	res.render("./piggame/pigGame.html");	
 });
