@@ -57,9 +57,9 @@ app.post("/blogs", function(req,res){
 	});
 });
 
-app.get("/blogs/programs", function(req, res){
-	res.send("programs");
-});
+// app.get("/blogs/programs", function(req, res){
+// 	res.send("programs");
+// });
 
 app.get("/blogs/piggame", function(req, res){
 	res.render("./piggame/pigGame.html");	

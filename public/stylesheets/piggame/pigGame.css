@@ -1,7 +1,6 @@
 /**********************************************
 *** GENERAL
 **********************************************/
-
 .final-score {
     position: absolute;
     left: 50%;
@@ -87,6 +86,7 @@ body {
     font-size: 80px;
     font-weight: 100;
     color: #EB4D4D;
+	margin-top: 100px;
     margin-bottom: 130px;
 }
 
